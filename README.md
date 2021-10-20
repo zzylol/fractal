@@ -33,9 +33,12 @@ Vertex ids are expected to be sequential integers between 0 and (total number of
 1. Download and configure Spark 2.x.x:
 
 ```
-export JAVA_HOME=<openjdk-8-installation-folder>
+sudo apt-get install openjdk-8-jdk
+sudo apt-get install oepnjdk-8-jre
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 cd <repositories-folder>
 wget https://archive.apache.org/dist/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
+tar -xzvf spark-2.2.0-bin-hadoop2.7
 mv spark-2.2.0-bin-hadoop2.7.tgz spark
 cd spark
 export SPARK_HOME=`pwd` 
