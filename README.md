@@ -39,7 +39,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 cd <repositories-folder>
 wget https://archive.apache.org/dist/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
 tar -xzvf spark-2.2.0-bin-hadoop2.7.tgz
-mv spark-2.2.0-bin-hadoop2.7.tgz spark
+mv spark-2.2.0-bin-hadoop2.7 spark
 cd spark
 export SPARK_HOME=`pwd` 
 ```
