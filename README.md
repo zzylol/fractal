@@ -83,7 +83,7 @@ OPTION:
    input_format=al|el                      'al: adjacency list; el: edge list'  Default: al
    comm=scratch|graphred                   'Execution strategy'                 Default: scratch
    spark_master=local[1]|local[2]|yarn|... 'Spark master URL'                   Default: local[worker_cores]
-   deploy_mode=server|client               'Spark deploy mode'                  Default: client
+   deploy_mode=cluster|client               'Spark deploy mode'                  Default: client
    log_level=info|warn|error               'Log vebosity'                       Default: info
 ```
 
@@ -108,7 +108,7 @@ OPTION:
    input_format=al|el                      'al: adjacency list; el: edge list'  Default: al
    comm=scratch|graphred                   'Execution strategy'                 Default: scratch
    spark_master=local[1]|local[2]|yarn|... 'Spark master URL'                   Default: local[worker_cores]
-   deploy_mode=server|client               'Spark deploy mode'                  Default: client
+   deploy_mode=cluster|client               'Spark deploy mode'                  Default: client
    log_level=info|warn|error               'Log vebosity'                       Default: info 
 
 ALGOPTION for 'cliques':
