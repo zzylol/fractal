@@ -34,7 +34,6 @@ Vertex ids are expected to be sequential integers between 0 and (total number of
 
 ```
 sudo apt-get install openjdk-8-jdk
-sudo apt-get install oepnjdk-8-jre
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 cd <repositories-folder>
 wget https://archive.apache.org/dist/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
