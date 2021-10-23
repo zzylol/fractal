@@ -120,9 +120,11 @@ ALGOPTION for 'cliques':
 
 For example, the following example submits the cliques kernel with k=2 extension steps
 (i.e., cliques with k+1=3 vertices) over the dataset ```citeseer-single-label.graph```:
+local:
 ```
 steps=2 inputgraph=$FRACTAL_HOME/data/citeseer-single-label.graph app=cliques ./bin/fractal.sh
 ```
+Spark cluster mode:
 ```
 steps=2 input_format=el deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph query=$FRACTAL_HOME/data/q1-triangle.graph app=gquerying ./bin/fractal.sh
 ```
