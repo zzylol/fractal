@@ -51,6 +51,9 @@ cd fractal
 export FRACTAL_HOME=`pwd`
 ./gradlew assemble
 ```
+```
+copy spark, fractal, ~/.bashrc to each slave node
+```
 
 ## Running built-in applications
 
@@ -119,6 +122,8 @@ For example, the following example submits the cliques kernel with k=2 extension
 (i.e., cliques with k+1=3 vertices) over the dataset ```citeseer-single-label.graph```:
 ```
 steps=2 inputgraph=$FRACTAL_HOME/data/citeseer-single-label.graph app=cliques ./bin/fractal.sh
+```
+```steps=2 input_format=el deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph query=$FRACTAL_HOME/data/q1-triangle.graph app=gquerying ./bin/fractal.sh
 ```
 
 ## Running custom applications
