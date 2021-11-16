@@ -131,7 +131,7 @@ steps=2 input_format=el deploy_mode=cluster spark_master="spark://10.10.1.1:6066
 ```
 4-motifs:
 ```
-step=3 comm=graphred num_workers=4 input_format=el deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph app=motifs ./bin/fractals.sh
+step=3 input_format=el deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph app=motifs ./bin/fractals.sh
 ```
 ## Running custom applications
 
