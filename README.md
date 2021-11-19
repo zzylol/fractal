@@ -127,12 +127,18 @@ steps=2 inputgraph=$FRACTAL_HOME/data/citeseer-single-label.graph app=cliques ./
 Spark cluster mode:
 query-triangle
 ```
-steps=2 input_format=el deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph query=$FRACTAL_HOME/data/q1-triangle.graph app=gquerying ./bin/fractal.sh
+steps=2 input_format=el  worker_memory=4g master_memory=4g deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph query=$FRACTAL_HOME/data/q1-triangle.graph app=gquerying ./bin/fractal.sh
 ```
 4-motifs:
 ```
-step=3 input_format=el deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph app=motifs ./bin/fractals.sh
+step=3 input_format=el  worker_memory=4g master_memory=4g deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph app=motifs ./bin/fractals.sh
 ```
+
+5-House:
+```
+steps=4 input_format=el worker_memory=4g master_memory=4g deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph query=$FRACTAL_HOME/data/q6-house.graph app=gquerying ./bin/fractal.sh
+```
+
 ## Running custom applications
 
 You can also implement your own application using Fractal API. We provide the subproject 
