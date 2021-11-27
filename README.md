@@ -134,6 +134,11 @@ steps=2 input_format=el  worker_memory=4g master_memory=4g deploy_mode=cluster s
 step=3 input_format=el  worker_memory=4g master_memory=4g deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph app=motifs ./bin/fractals.sh
 ```
 
+correct version: (5-clique, mico)
+```
+ steps=4 deploy_mode=cluster spark_master="spark://10.10.1.1:6066" worker_cores=20 num_workers=4 worker_memory=4g input_format=el  inputgraph=$FRACTAL_HOME/data/mico.undigraph app=cliques ./bin/fractal.sh
+```
+
 5-House:
 ```
 steps=4 input_format=el worker_memory=4g master_memory=4g deploy_mode=cluster spark_master="spark://10.10.1.1:6066" inputgraph=$FRACTAL_HOME/data/mico.undigraph query=$FRACTAL_HOME/data/q6-house.graph app=gquerying ./bin/fractal.sh
